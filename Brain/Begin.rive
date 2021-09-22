@@ -1,0 +1,20 @@
+!version = 2.0
+
+> object saveUser python
+     import utils
+     success = utils.saveRest(str(args[0]), str(args[1]))
+     if success:
+        return "true: "
+     else:
+        return "false: "
+< object
+
+
++ hi
+- Hi there! it's time to reveal some restaurants that you may like, but first what's your name?
++ *
+-<set name=<star>> what's your id <get name>?
++ #
+- <call>saveUser <get name> <star></call> do you want a new restaurant or an old one?
++ new restaurant
+- papa john's pizza is a very special pizza restaurant
